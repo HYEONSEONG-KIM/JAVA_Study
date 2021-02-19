@@ -31,7 +31,7 @@ public class Homework {
 		stature = Double.parseDouble(sc.nextLine());
 		
 		System.out.println("====입력된 정보====");
-		System.out.println("아이디 : " + id + "\n" +
+		System.out.print("아이디 : " + id + "\n" +
 						 "비밀번호 : "+ password + "\n" +
 						 "이름 : " + name + "\n" +
 						 "나이 : " + age + "세\n" +
