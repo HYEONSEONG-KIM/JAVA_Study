@@ -85,7 +85,7 @@ public class SelfTest {
 			cnt++;
 		}
 	
-		System.out.print("13.배가 불러고 입에서 음식이 당겨 음식을 제한하지 못한다 >");
+		System.out.print("13.배가 불러도 입에서 음식이 당겨 음식을 제한하지 못한다 >");
 		check = Integer.parseInt(sc.nextLine());
 		if(check == 1){
 			cnt++;
