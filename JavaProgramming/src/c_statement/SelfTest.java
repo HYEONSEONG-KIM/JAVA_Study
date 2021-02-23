@@ -31,7 +31,7 @@ public class SelfTest {
 			cnt++;
 		}
 		
-		System.out.print("4.스트레스를 받으면 식욕기 땡긴다 >");
+		System.out.print("4.스트레스를 받으면 식욕이 땡긴다 >");
 		check = Integer.parseInt(sc.nextLine());
 		if(check == 1){
 			cnt++;
@@ -73,7 +73,7 @@ public class SelfTest {
 			cnt++;
 		}
 		
-		System.out.print("11. 빵이나 과자, 케익을 먹기 시작하면 양을 조절하지 못하고 끊임없이 먹게 된다 >");
+		System.out.print("11.빵이나 과자, 케익을 먹기 시작하면 양을 조절하지 못하고 끊임없이 먹게 된다 >");
 		check = Integer.parseInt(sc.nextLine());
 		if(check == 1){
 			cnt++;
