@@ -20,9 +20,10 @@
 ## Java Programming Basic
 
 - [Variable(변수)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/a_variable/Variable.java)
-- [Arithmetic_Operator(산술연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/ArithmeticOperator.java)
-- [Comparing_Operator(비교연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/ComparingOperator.java)
-- [Logical_Operator(논리연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/LogicalOperator.java)
-- [EtcOperator(그 외 연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/Etc.java)
+- [Arithmetic Operator(산술연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/ArithmeticOperator.java)
+- [Comparing Operator(비교연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/ComparingOperator.java)
+- [Logical Operator(논리연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/LogicalOperator.java)
+- [Etc Operator(그 외 연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/Etc.java)
 - [Conditional Statement(조건문)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/c_statement/ConditionalStatement.java)
+- [Repetitive Statement(반복문)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/c_statement/RepetitiveStatement.java)
 
