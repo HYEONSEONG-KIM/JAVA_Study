@@ -26,4 +26,4 @@
 - [Etc Operator(그 외 연산자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/b_operator/Etc.java)
 - [Conditional Statement(조건문)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/c_statement/ConditionalStatement.java)
 - [Repetitive Statement(반복문)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/c_statement/RepetitiveStatement.java)
-- [Array](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/Array.java)
+- [Array(배열)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/Array.java)
