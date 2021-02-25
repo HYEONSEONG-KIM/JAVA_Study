@@ -31,13 +31,15 @@ public class RandomStudents {
 			int random;
 			
 			while(true){
-			random = (int)(Math.random() * students.length);
-			if(check[random] == true){
-				continue;
-			}else{
-				break;
+			
+				random = (int)(Math.random() * students.length);
+				if(check[random] == true){
+					continue;
+				}else{
+					break;
+				}
 			}
-			}
+			
 			check[random] = true;
 			ran[i] = random;
 		}		
