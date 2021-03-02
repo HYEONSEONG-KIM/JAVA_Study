@@ -164,6 +164,7 @@ public class Quiz {
 		
 		System.out.println(Arrays.toString(result));
 		
+		
 	}
 }
 
