@@ -29,4 +29,4 @@
 - [Array(배열)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/Array.java)
 - [Sort(정렬)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/Sort.java)
 - [Multi Dimensional Array(다차원 배열)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/MultiDimensionalArray.java)
-- [User Defined DataType(사용자 정의 데이터 타입-클래스](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/e_oop/UserDefinedDataType.java)
+- [User Defined DataType(사용자 정의 데이터 타입-클래스)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/e_oop/UserDefinedDataType.java)
