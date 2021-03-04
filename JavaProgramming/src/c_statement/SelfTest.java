@@ -19,6 +19,7 @@ public class SelfTest {
 			cnt++;
 		}
 		
+		
 		System.out.print("2.식사후 단맛이 도는 디저트를 즐긴다 >");
 		check = Integer.parseInt(sc.nextLine());
 		if(check == 1){
