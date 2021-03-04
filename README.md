@@ -28,3 +28,4 @@
 - [Repetitive Statement(반복문)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/c_statement/RepetitiveStatement.java)
 - [Array(배열)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/Array.java)
 - [Sort(정렬)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/Sort.java)
+- [Multi Dimensional Array(다차원 배열)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/d_array/MultiDimensionalArray.java)
