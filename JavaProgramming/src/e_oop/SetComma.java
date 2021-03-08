@@ -17,19 +17,13 @@ public class SetComma {
 		int cnt = 0;	
 		for(int i = num.length() - 1; i >= 0; i--){
 			cnt++;
-			str += num.charAt(i);
+			str = num.charAt(i) + str;
 			
 			if(cnt % 3 == 0 && i != 0)
-				str += ",";
+				str = "," + str;
 		}
 		
-		String result = "";
-		
-		for(int i = str.length() - 1; i >= 0; i--){
-			result += str.charAt(i);
-		}
-	
-		System.out.println(result);
+		System.out.println(str);
 	} 
 	
 }

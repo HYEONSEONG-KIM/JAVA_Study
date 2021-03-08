@@ -11,6 +11,7 @@ public class Student {
 	int rank;
 	
 	String name;
+
 	
-	int[] test;
+	
 }

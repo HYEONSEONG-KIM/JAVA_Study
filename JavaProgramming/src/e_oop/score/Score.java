@@ -18,6 +18,7 @@ public class Score {
 			student.math = (int)(Math.random() * 101);
 			
 			
+			
 			students[i] = student;
 		}
 		
@@ -88,6 +89,21 @@ public class Score {
 		
 	
 		
+		int[] subSum = new int[3];
+		double[] subAvg = new double[3];
+		
+		for(int i = 0 ; i < students.length; i++){
+			subSum[0] += students[i].kor;
+			subSum[1] += students[i].eng;
+			subSum[2] += students[i].math;
+		}
+		
+		for(int i = 0; i < subAvg.length; i++){
+			subAvg[i] = Math.round((double)subSum[i] / students.length * 100) / 100.0;
+		}
+		
+		System.out.println("과목합계\t"+ subSum[0] + "\t" + subSum[1] + "\t" + subSum[2]);
+		System.out.println("과목평균\t"+ subAvg[0] + "\t" + subAvg[1] + "\t" + subAvg[2]);
 		
 		/*int korSum = 0; 
 		int engSum = 0;
@@ -113,21 +129,6 @@ public class Score {
 		System.out.println("과목평균\t"+ korAvg + "\t" + engAvg + "\t" + mathAvg);
 		*/
 		
-		int[] subSum = new int[3];
-		double[] subAvg = new double[3];
-		
-		for(int i = 0 ; i < students.length; i++){
-			subSum[0] += students[i].kor;
-			subSum[1] += students[i].eng;
-			subSum[2] += students[i].math;
-			}
-		
-		for(int i = 0; i < subAvg.length; i++){
-			subAvg[i] = Math.round((double)subSum[i] / students.length * 100) / 100.0;
-		}
-		
-		System.out.println("과목합계\t"+ subSum[0] + "\t" + subSum[1] + "\t" + subSum[2]);
-		System.out.println("과목평균\t"+ subAvg[0] + "\t" + subAvg[1] + "\t" + subAvg[2]);
 		
 				
 		
