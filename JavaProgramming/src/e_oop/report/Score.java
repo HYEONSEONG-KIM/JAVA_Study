@@ -3,7 +3,6 @@ package e_oop.report;
 import java.util.Arrays;
 
 
-
 public class Score {
 
 	public static void main(String[] arg){
@@ -13,9 +12,7 @@ public class Score {
 		for(int i = 0; i < students.length; i++){
 			Student student = new Student();
 			student.score();
-			student.sumScore();
 			student.avgScore();
-			student.setRank();
 			student.setName(i);
 			students[i] = student;
 		}
@@ -41,16 +38,16 @@ public class Score {
 		
 		
 		
-		
-		for(int i = 0; i < students.length; i++){
+		for(int i = 0; i < students.length - 1; i++){
 			int min = i;
-			for(int j = i + 1; j <students.length; j++){
-				if(students[i].rank <students[min].rank){
+			Student temp = new Student();
+			for(int j = i + 1; j < students.length; j++){
+				if(students[j].rank < students[min].rank){
 					min = j;
 				}
-				
 			}
-			Student temp = students[i];
+		
+			temp = students[i];
 			students[i] = students[min];
 			students[min] = temp;
 		}
