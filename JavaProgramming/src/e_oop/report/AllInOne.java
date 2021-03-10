@@ -22,12 +22,14 @@ public class AllInOne {
 	
 	//잉크 충전 메서드
 	void addInk(){
+		System.out.println("잉크가 충전되었습니다");
 		ink = 40;
 		ink_balance();
 	}
 	
 	//종이 추가 메서드
 	void addPaper(){
+		System.out.println("종이가 추가되었습니다");
 		paper = 100;
 		paper_balance();
 	}
@@ -43,9 +45,9 @@ public class AllInOne {
 	void paper_balance(){
 		System.out.println("현재 종이의 잔량");
 		for(int i = 0; i < max_paper; i++){
-			if(i % 5 == 0 && paper >= i){
+			if(i % 5 == 0 && paper > i){
 				System.out.print("■");
-			}else if(i % 10 == 0 && paper < i){
+			}else if(i % 5 == 0 && paper <= i){
 				System.out.print("□");
 			}
 		}
@@ -57,9 +59,9 @@ public class AllInOne {
 	void ink_balance(){
 		System.out.println("현재 잉크의 잔량");
 		for(int i = 0; i < max_ink; i++){
-			if(i % 2 == 0 && ink >= i){
+			if(i % 2 == 0 && ink > i){
 				System.out.print("■");
-			}else if(i % 2 == 0 && ink < i){
+			}else if(i % 2 == 0 && ink <= i){
 				System.out.print("□");
 			}
 		}
