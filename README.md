@@ -39,3 +39,4 @@
 - [Static](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/e_oop/Static.java)
 - [JVM](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/e_oop/JVM.java)
 - [Constructor(생성자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/e_oop/VariableInit.java)
+- [Extends(상속)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/g_oop2/SampleParent.java)
