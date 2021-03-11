@@ -15,4 +15,8 @@ public class ScanUtill {
 		return Integer.parseInt(s.nextLine());
 	}
 	
+	public static char nextChar(){
+		return s.next().charAt(0);
+	}
+	
 }
