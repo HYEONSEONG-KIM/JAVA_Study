@@ -8,18 +8,21 @@ public class Check {
 	String[] answer = key.word();
 	String[] show = new String[answer[1].length()];
 	boolean pass = false;
+	String check;
 	
-	static int cnt = 0;
+	 int cnt = 0;
 	
 	
 	
-	
+	//내가 맞힌 알파벳 보여주는 배열'_'로 셋팅
 	void showSet(){
 		for(int i = 0; i < show.length; i++){
 			show[i] = "_";
 		}
 	}
 	
+	
+	//show배열 출력
 	void showPrint(){
 		System.out.println("==========맞춘 단어 조합==========");
 		for(int i = 0; i < show.length; i++){
@@ -29,10 +32,11 @@ public class Check {
 	}
 	
 	
+	//알파벳 입력 및 체크
 	void inputAlphabet_check(){
 		
 		System.out.print("알파벳 입력👉");
-		String check = ScanUtill.nextLine();
+		check = ScanUtill.nextLine();
 		int flag = 0;
 	 
 		for(int i = 0; i < answer[1].length(); i++){
@@ -50,7 +54,7 @@ public class Check {
 	
 	void inputAnswer_check(){
 		System.out.print("정답입력👉");
-		String check = ScanUtill.nextLine();
+		check = ScanUtill.nextLine();
 		
 		if(check.equals(answer[1])){
 			System.out.println("\n😊정답입니다^^무사히 HangMan을 구출했어요😊\n");
