@@ -40,3 +40,6 @@
 - [JVM](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/e_oop/JVM.java)
 - [Constructor(생성자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/e_oop/VariableInit.java)
 - [Extends(상속)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/g_oop2/SampleParent.java)
+- [Access Modifier(접근제어자)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/g_oop2/AccessModifier.java)
+- [abstract(추상메서드 & 추상클래스)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/g_oop2/SampleAbstractParent.java)
+- [interface(인터페이스)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/g_oop2/SampleInterface.java)
