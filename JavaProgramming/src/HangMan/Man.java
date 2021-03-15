@@ -51,6 +51,7 @@ public class Man {
 		dieMan[4][3] = "■"; dieMan[5][1] = "■"; dieMan[5][2] = "■";
 		dieMan[5][3] = "■"; dieMan[5][4] = "■"; dieMan[5][5] = "■";
 		dieMan[6][1] = "■"; dieMan[6][5] = "■";
+		dieMan[4][7] = "■"; dieMan[4][8] = "■"; dieMan[4][9] = "■";
  		dieMan[5][7] = "■"; dieMan[5][8] = "■"; dieMan[5][9] = "■";
 		dieMan[6][7] = "■"; dieMan[6][8] = "■"; dieMan[6][9] = "■";
 		
@@ -107,18 +108,6 @@ public class Man {
 	}
 	
 	
-	
-	void warning(int cnt){
-		if(cnt == 7){
-			System.out.println("으으으...");
-		}else if(cnt == 8){
-			System.out.println("으으으으...");
-		}else if(cnt == 9){
-			System.out.println("으으으으으...");
-		}else if(cnt == 10){
-			System.out.println("으으으으으으1#$!^#@$%!@#%$....");
-		}
-	}
 	
 	
 }
