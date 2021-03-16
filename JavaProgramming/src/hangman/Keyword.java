@@ -1,4 +1,4 @@
-package HangMan;
+package hangman;
 
 public class Keyword {
 	
@@ -16,7 +16,7 @@ public class Keyword {
 	void showRule(){
 		System.out.println("=================HangMan에 오신걸 환영합니다=================");
 		System.out.println("게임의 룰을 설명 드리겠습니다");
-		System.out.println("1.자동으로 영단어 하나가 뽑히며 동시에 정답의 키워드를 알려드립니다");
+		System.out.println("1.자동으로 영단어 하나가 뽑히며 동시에 정답의 키워드,글자수를 알려드립니다");
 		System.out.println("2.단어 맞추기와 정답 맞추기중 선택하시고, 선택하신 항목에 따라 입력값을 입력해주세요");
 		System.out.println("3.단어 선택시 입력하신 단어가 정답에 포함되어 있으면 해당 위치를 알려 드립니다");
 		System.out.println("4.입력하신 단어가 포함 되어있지 않으면 목숨은 1 줄어듭니다");

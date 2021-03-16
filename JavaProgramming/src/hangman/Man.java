@@ -1,4 +1,4 @@
-package HangMan;
+package hangman;
 
 public class Man {
 

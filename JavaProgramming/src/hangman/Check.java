@@ -1,4 +1,4 @@
-package HangMan;
+package hangman;
 
 import e_oop.ScanUtill;
 
@@ -115,7 +115,7 @@ public class Check {
 	void alphabetCheck(String str){
 		for(int i = 0; i < alphabet.length; i++){
 			if(alphabet[i].equals(str)){
-				alphabet[i] = "□";
+				alphabet[i] = "👊";
 			}
 		}
 	}
