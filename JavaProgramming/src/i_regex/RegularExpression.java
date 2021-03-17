@@ -66,7 +66,10 @@ public class RegularExpression {
 		Pattern p_Email = Pattern.compile(regexEmail);
 		Matcher m_Email = p_Email.matcher(Email);
 		System.out.println(m_Email.matches());
+	
+		
 	}
+	
 
 	
 	
