@@ -31,10 +31,31 @@ public class Score {
 		subject.add("Oracle");
 		subject.add("Java");
 		
-		for(int i = 0; i < 5; i++){
-			String std= "std" + (i + 1);
-			student.add(std);
-		}
+		student.add("김병수");
+		student.add("곽명훈");
+		student.add("김나위");
+		student.add("김성현");
+		student.add("김영광");
+		student.add("김정명");
+		student.add("김찬미");
+		student.add("김현민");
+		student.add("김현성");
+		student.add("류창현");
+		student.add("맹세희");
+		student.add("배병주");
+		student.add("설동비");
+		student.add("양규진");
+		student.add("여지연");
+		student.add("오태훈");
+		student.add("이기정");
+		student.add("이상훈");
+		student.add("이재헌");
+		student.add("이치우");
+		student.add("전민주");
+		student.add("조기범");
+		student.add("조영현");
+		student.add("조항민");
+		student.add("최진우");
 	
 		//점수할당
 		ArrayList<ArrayList<Integer>> score = new ArrayList<>();
