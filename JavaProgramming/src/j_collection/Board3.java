@@ -20,7 +20,7 @@ public class Board3 {
 	private void start() {
 		
 		ArrayList<HashMap<String, Object>> boardList = new ArrayList<>();
-		SimpleDateFormat format = new SimpleDateFormat("yy-mm-dd");
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		
 		while(true){
 			
