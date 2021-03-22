@@ -17,6 +17,9 @@ public class JDBCBoard {
 		 */
 		JDBCBoard board = new JDBCBoard();
 		board.init();
+		
+		//PreparedStatement, ResultSet의 객체를 파라미터로 건내서 사용 가능??
+		//보통 DB에서 데이터를 받아와서 메서드로 바로 출력???아님 ArrayList, HashMap에 담아서 사용??
 	}
 	
 	
@@ -38,7 +41,7 @@ public class JDBCBoard {
 			
 		label :while(true){
 			String sql = "SELECT BOARD_NO AS \"번호\", TITLE AS \"제목\" ,USER_ID AS \"작성자\" ,REG_DATE AS \"작성일\" "
-					+ "FROM TB_JDBC_BOARD";
+					+ "FROM TB_JDBC_BOARD ORDER BY 1";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			
@@ -76,13 +79,18 @@ public class JDBCBoard {
 					create();
 					break;
 				case 0 :
-					System.out.println("종료되었습니다");
+					System.out.println("*****종료되었습니다*****");
 					break label;
 			}
 			
 		}
 			} catch (SQLException e) {
 			e.printStackTrace();
+		}finally{
+			//닫을때는 연것의 역순으로
+			if(rs != null) try{ rs.close(); } catch(Exception e){}
+			if(ps != null) try{ ps.close(); } catch(Exception e){}
+			if(con != null) try{ con.close(); } catch(Exception e){}
 		}
 		
 		
@@ -91,10 +99,6 @@ public class JDBCBoard {
 
 	private void read() {
 		try {
-//			con = DriverManager.getConnection(url, user, password);
-			
-		
-				
 				String sql = "SELECT BOARD_NO AS \"번호\","
 						+ " TITLE AS \"제목\" ,"
 						+ " CONTENT AS \"내용\","
@@ -151,65 +155,71 @@ public class JDBCBoard {
 
 	private void delete(int input) {
 		
-		 try {
-			 String sql = "SELECT BOARD_NO FROM TB_JDBC_BOARD";
-			 ps = con.prepareStatement(sql);
-			rs = ps.executeQuery();
+		try {
+			String sql ="DELETE FROM TB_JDBC_BOARD WHERE BOARD_NO = ?";
+			ps = con.prepareStatement(sql);
+			ps.setObject(1, input);
+			int result = ps.executeUpdate();
 			
-			while(rs.next()){
-				int check = rs.getInt("BOARD_NO");
-				 if(check == input){
-					 sql = "DELETE FROM TB_JDBC_BOARD WHERE BOARD_NO = ?";
-					 ps = con.prepareStatement(sql);
-					 ps.setObject(1, input);
-					 
-					 int result = ps.executeUpdate();
-					 if(result == 1){
-						 System.out.println("게시물이 삭제되었습니다");
-					 }
-				 }
+			if(result != 0){
+				System.out.println("\n*****"+ input + "번 게시물이 삭제되었습니다*****");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
+	private void update(int input) {
+		
+		
+		try {
+			String sql = "";
+			System.out.println("수정할 범위를 입력해주세요");
+			System.out.print("1.제목\t2.내용\t3.제목&내용>");
+			int num = ScanUtill.nextInt();
+			if(num == 1){
+				sql = "UPDATE TB_JDBC_BOARD SET TITLE = ?"
+				 		+ " WHERE BOARD_NO = '"
+				 		+ input +"'";
+				ps = con.prepareStatement(sql);
+				System.out.print("제목입력>");
+				String title = ScanUtill.nextLine();
+				ps.setObject(1, title);
+			}else if(num ==2){
+				sql = "UPDATE TB_JDBC_BOARD SET"
+				 		+ " CONTENT = ?"
+				 		+ " WHERE BOARD_NO = '"
+				 		+ input +"'";
+				ps = con.prepareStatement(sql);
+				System.out.print("내용입력>");
+				String content = ScanUtill.nextLine();
+				ps.setObject(1, content);
+			}else if(num == 3){
+			sql = "UPDATE TB_JDBC_BOARD SET TITLE = ?,"
+			 		+ " CONTENT = ?"
+			 		+ " WHERE BOARD_NO = '"
+			 		+ input +"'";
+			ps = con.prepareStatement(sql);
+			System.out.print("제목입력>");
+			String title = ScanUtill.nextLine();
+			System.out.print("내용입력>");
+			String content = ScanUtill.nextLine();
+			
+			ps.setObject(1, title);
+			ps.setObject(2, content);
+			}
+			
+			int result = ps.executeUpdate();
+			if(result == 1){
+				System.out.println("\n*****게시물이 수정되었습니다*****");
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
-
-
-	private void update(int input) {
-		 try {
-			 String sql = "SELECT * FROM TB_JDBC_BOARD";
-			 ps = con.prepareStatement(sql);
-			 rs = ps.executeQuery();
-			 
-			 while(rs.next()){
-			 int check = rs.getInt("BOARD_NO");
-			 if(check == input){
-				 sql = "UPDATE TB_JDBC_BOARD SET TITLE = ?,"
-				 		+ " CONTENT = ?"
-				 		+ " WHERE BOARD_NO = '"
-				 		+ input +"'";
-				 ps = con.prepareStatement(sql);
-				 System.out.print("제목 >");
-				 String title = ScanUtill.nextLine();
-				 System.out.println("내용 >");
-				 String content = ScanUtill.nextLine();
-				 
-				 ps.setObject(1, title);
-				 ps.setObject(2, content);
-			
-				 
-				 int result = ps.executeUpdate();
-				if(result == 1){
-					System.out.println("게시물이 수정되었습니다");
-				}
-				 
-			 }
-			 }
-			 
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 		
 	}
 
@@ -217,7 +227,6 @@ public class JDBCBoard {
 	private void create() {
 		
 		try {
-			con = DriverManager.getConnection(url, user, password);
 			
 			String sql = "INSERT INTO TB_JDBC_BOARD (BOARD_NO, TITLE, CONTENT, USER_ID, REG_DATE)"
 					+ "VALUES(("
@@ -238,7 +247,7 @@ public class JDBCBoard {
 			
 			int result = ps.executeUpdate();
 			if(result == 1){
-				System.out.println("게시글이 등록 되었습니다");
+				System.out.println("\n*****게시글이 등록 되었습니다*****");
 			}
 			
 		} catch (SQLException e) {
