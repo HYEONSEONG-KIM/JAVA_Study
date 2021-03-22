@@ -47,7 +47,7 @@
 - [Regular Expression(정규 표현식)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/i_regex/RegularExpression.java)
 
 
-## Collection Framwork && JDBC
+## Collection Framwork & JDBC
 - [ArrayList](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/j_collection/ArrayListClass.java)
 - [HashMap](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/j_collection/HashMapClass.java)
 - [JDBC](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/k_jdbc/JDBC.java)
