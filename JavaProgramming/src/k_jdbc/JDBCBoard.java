@@ -99,6 +99,7 @@ public class JDBCBoard {
 
 	private void read() {
 		try {
+				
 				String sql = "SELECT BOARD_NO AS \"번호\","
 						+ " TITLE AS \"제목\" ,"
 						+ " CONTENT AS \"내용\","
@@ -177,7 +178,7 @@ public class JDBCBoard {
 		try {
 			String sql = "";
 			System.out.println("수정할 범위를 입력해주세요");
-			System.out.print("1.제목\t2.내용\t3.제목&내용>");
+			System.out.print("1.제목\t2.내용\t3.제목&내용\t0.처음으로>");
 			int num = ScanUtill.nextInt();
 			if(num == 1){
 				sql = "UPDATE TB_JDBC_BOARD SET TITLE = ?"
@@ -209,6 +210,8 @@ public class JDBCBoard {
 			
 			ps.setObject(1, title);
 			ps.setObject(2, content);
+			}else if(num == 0){
+				return;
 			}
 			
 			int result = ps.executeUpdate();
