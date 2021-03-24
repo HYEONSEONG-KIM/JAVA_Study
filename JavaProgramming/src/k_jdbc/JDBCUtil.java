@@ -55,7 +55,7 @@ public class JDBCUtil {
 	
 	public Map<String, Object> selectOne(String sql){
 		
-		Map<String, Object> row = new HashMap<String, Object>();
+		Map<String, Object> row = null;
 	try {
 		con = DriverManager.getConnection(url, user, password);
 		ps = con.prepareStatement(sql);
@@ -64,7 +64,8 @@ public class JDBCUtil {
 		
 		int columnCnt = metaData.getColumnCount();
 		
-		while(rs.next()){
+		if(rs.next()){
+			row = new HashMap<>();
 		for(int i = 1; i <= columnCnt; i++){
 			row.put(metaData.getColumnName(i), rs.getObject(i));
 		}
@@ -84,7 +85,7 @@ public class JDBCUtil {
 	
 	
 	public Map<String, Object> selectOne(String sql, List<Object> param){
-			Map<String, Object> row = new HashMap<String, Object>();
+			Map<String, Object> row = null;
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			ps = con.prepareStatement(sql);
@@ -96,7 +97,8 @@ public class JDBCUtil {
 			
 			int columnCnt = metaData.getColumnCount();
 			
-			while(rs.next()){
+			if(rs.next()){
+				row = new HashMap<>();
 			for(int i = 1; i <= columnCnt; i++){
 				row.put(metaData.getColumnName(i), rs.getObject(i));
 			}

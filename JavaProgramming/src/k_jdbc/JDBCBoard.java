@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import e_oop.ScanUtill;
 
@@ -17,6 +18,7 @@ public class JDBCBoard {
 		 */
 		JDBCBoard board = new JDBCBoard();
 		board.init();
+	
 		
 		//PreparedStatement, ResultSet의 객체를 파라미터로 건내서 사용 가능??
 		//보통 DB에서 데이터를 받아와서 메서드로 바로 출력???아님 ArrayList, HashMap에 담아서 사용??
@@ -139,6 +141,7 @@ public class JDBCBoard {
 				case 2 :
 					delete(input);
 					break;
+				
 				case 0 :
 					return;
 				
@@ -152,6 +155,9 @@ public class JDBCBoard {
 
 
 
+
+
+	
 
 
 	private void delete(int input) {

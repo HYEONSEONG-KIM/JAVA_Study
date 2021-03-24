@@ -50,13 +50,14 @@ public class JDBCTest {
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("연결성공");
 			
-			String sql = "SELECT * FROM MEMBER";
+			String sql = "SELECT * FROM MEMBER ?";
 			
 			//실행객체
 			Statement stmt = con.createStatement();
 			
 			//실행 select
 			ResultSet rs = stmt.executeQuery(sql);
+			
 			ResultSetMetaData meta = rs.getMetaData();
 			int cnt = meta.getColumnCount();
 			
