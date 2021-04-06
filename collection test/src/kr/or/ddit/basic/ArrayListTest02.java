@@ -29,10 +29,19 @@ public class ArrayListTest02 {
 				System.out.println(name.get(i));
 			}*/
 			
-			char firstName2 = name.get(i).charAt(0);
+			/*char firstName2 = name.get(i).charAt(0);
 			
 			if(firstName2 == '김'){
 				System.out.println(name.get(i));
+			}*/
+			
+			String name0 = name.get(i);
+			if(name0.startsWith("김")){
+				System.out.println(name0);
+			}
+			
+			if(name0.indexOf("김") == 1){
+				System.out.println(name0);
 			}
 		}
 		
