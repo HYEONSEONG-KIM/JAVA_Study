@@ -21,18 +21,16 @@ public class ArrayListTest04 {
 		}
 		
 		int maxLength = nickNameList.get(0).length();
-		int maxIndex = 0;
 		
 		for(int i = 0; i < 5; i++){
 			int check = nickNameList.get(i).length();
 			
 			if(maxLength <= check){
 				maxLength = check;
-				maxIndex = i;
 			}
 		}
 		
-		System.out.print("입력하신 별명중 가장 긴 단어는");
+		System.out.print("입력하신 별명중 가장 긴 단어는 ");
 		for(int i = 0; i < 5; i++){
 			if(nickNameList.get(i).length() == maxLength){
 				System.out.print(nickNameList.get(i) + " ");
