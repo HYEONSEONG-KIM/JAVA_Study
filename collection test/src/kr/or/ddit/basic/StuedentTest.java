@@ -33,9 +33,7 @@ public class StuedentTest {
 		
 		
 		for(int i = 0; i < stdList.size(); i++){
-			int sum = stdList.get(i).getKorean() + stdList.get(i).getMath() + stdList.get(i).getEnglish();
 			stdList.get(i).setRank(1);
-			stdList.get(i).setTotalScore(sum);
 		}
 		
 		
@@ -82,6 +80,7 @@ class Student implements Comparable<Student>{
 		this.korean = korean;
 		this.english = english;
 		this.math = math;
+		this.totalScore = korean + english + math;
 	}
 
 

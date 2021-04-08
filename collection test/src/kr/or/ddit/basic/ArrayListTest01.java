@@ -79,6 +79,7 @@ public class ArrayListTest01 {
 		
 		String[] str2 = list2.toArray(new String[0]);
 		
+		
 		for(String str3 : str2){
 			System.out.println(str3);
 		}
