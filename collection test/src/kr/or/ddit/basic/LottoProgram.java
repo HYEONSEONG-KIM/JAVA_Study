@@ -14,20 +14,24 @@ public class LottoProgram {
 	int input;
 	
 	
+	
+		public static void main(String[] args) {
+			
+			LottoProgram lp = new LottoProgram();
+			lp.start();
+			
+		}
+		
+		
+	//시작 메서드	
 	private void start() {
 		while(true){
 			showStart();
 		}
 	}
 
-	public static void main(String[] args) {
-		
-		LottoProgram lp = new LottoProgram();
-		lp.start();
-		
-	}
 
-
+	//선택 메서드
 	private void showStart() {
 		
 		System.out.println("============================");
@@ -53,7 +57,8 @@ public class LottoProgram {
 
 	
 	}
-
+	
+	//로또 구입 메서드
 	private void buyLotto() {
 		
 		int cnt = 0;
@@ -71,6 +76,9 @@ public class LottoProgram {
 		System.out.println();
 		if(money < lotto){
 			System.out.println("입력 금액이 너무 적습니다. 로또번호 구입 실패!!!");
+			return;
+		}else if(money > 100000){
+			System.out.println("입력 금액이 너무 큽니다. 로또번호 구입 실패!!!");
 			return;
 		}
 		System.out.println();
