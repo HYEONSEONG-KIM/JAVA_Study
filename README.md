@@ -57,6 +57,7 @@
 - [Stack&Queue](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/StackQueueTest.java)
 - [Set](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/SetTest.java)
 - [Properties](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/PropertiesTest.java)
+- [Equals & HashCode 재정의](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/EqualsHashCodeTest.java)
 
 
 ## Generic
