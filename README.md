@@ -56,4 +56,5 @@
 - [JDBC Singleton](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/k_jdbc/JDBCUtil.java)
 - [Stack&Queue](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/StackQueueTest.java)
 - [Set](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/SetTest.java)
+- [Properties](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/PropertiesTest.java)
 
