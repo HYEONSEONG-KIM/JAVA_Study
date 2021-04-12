@@ -163,8 +163,14 @@ public class PhoneBookTest {
 		System.out.print("수정하고자 하는 전화번호 주인의 이름을 입력하세요>>");
 		String name = sc.nextLine();
 		
-		Set<String> set = phList.keySet();
 		
+		/*if(!phList.containsKey(name)){
+			System.out.println("입력하신 이름의 정보는 없습니다");
+			return;
+		}*/
+		
+		
+		Set<String> set = phList.keySet();
 		for(String key : set){
 			if(key.equals(name)){
 				flag = true;

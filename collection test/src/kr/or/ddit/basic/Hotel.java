@@ -94,7 +94,8 @@ public class Hotel {
 		System.out.println("체크아웃 할 객실 번호를 입려하세요");
 		System.out.print("방번호 입력>>");
 		input = Integer.parseInt(sc.nextLine());
-	
+		
+		
 		Set<Integer> set = hotel.keySet();
 		
 		for(int roomNum : set){
