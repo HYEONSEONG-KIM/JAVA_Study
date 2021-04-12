@@ -31,6 +31,8 @@ public class EqualsHashCodeTest {
 		testSet.add(p2);
 		System.out.println("set의 개수 : " + testSet.size());
 		
+		//hashcode를 재정의 하는 이유 : equals가 객체안의 데이터를 비교하여 동일성 여부를 체크하는 것이라면, hashcode는 객체 자체를 비교하여 동일성 여부를 체크
+		// => set같은 경우에 객체를 add할 경우 hashcode를 재정의하여 같은 데이터가 들어있는 객체들을 같은 객체로 정의하여 1개의 객체만 add되도록 함 
 		System.out.println("p1 : " + p1.hashCode());
 		System.out.println("p2 : " + p2.hashCode());
 		System.out.println("p3 : " + p3.hashCode());
@@ -67,6 +69,7 @@ class Person{
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
