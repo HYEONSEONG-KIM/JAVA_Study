@@ -61,6 +61,7 @@ class Person{
 	}
 	
 	
+	//객체안의 데이터가 같으면 객체 자체도 같다고 인식하도록 재정의 하는것
 	@Override
 	public int hashCode() {
 		final int prime = 31;
