@@ -50,7 +50,8 @@
 ## Collection Framwork & JDBC
 - [ArrayList](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/j_collection/ArrayListClass.java)
 - [Vector](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/VectorTest.java)
-- [HashMap](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/j_collection/HashMapClass.java)
+- [HashMap01](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/j_collection/HashMapClass.java)
+- [HashMap02](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/MapTest01.java)
 - [JDBC](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/k_jdbc/JDBC.java)
 - [JDBC Singleton](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/JavaProgramming/src/k_jdbc/JDBCUtil.java)
 - [Stack&Queue](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/collection%20test/src/kr/or/ddit/basic/StackQueueTest.java)
