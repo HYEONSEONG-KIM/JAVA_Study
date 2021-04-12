@@ -60,4 +60,4 @@
 
 
 ## Generic
--[Varargs](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/genericTest/src/kr/or/ddit/basic/args/ArgsTest.java)
+- [Varargs](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/genericTest/src/kr/or/ddit/basic/args/ArgsTest.java)
