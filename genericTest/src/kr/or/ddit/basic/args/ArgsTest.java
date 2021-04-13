@@ -35,7 +35,7 @@ public class ArgsTest {
 		
 		return name + "씨 점수" + sum;
 	}
-
+    
 	
 	
 	public static void main(String[] args) {
@@ -57,16 +57,20 @@ public class ArgsTest {
 		
 		System.out.println(at.sumArg2("홍길동", 10,20,30,40,50,60,70));
 		
-	}
-
-}
-
-
-
-
-
-
-
+		
+		 
+		 
+		
+	}    
+         
+}        
+         
+         
+         
+         
+         
+         
+         
 
 
 
