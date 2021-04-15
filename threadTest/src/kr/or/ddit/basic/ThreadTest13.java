@@ -93,7 +93,7 @@ class Horse extends Thread implements Comparable<Horse>{
 	
 	@Override
 	public void run() {
-		for(int i = 0; i < 50; i++){
+		for(int i = 1; i <= 50; i++){
 			now = i;
 			int ran = (int)(Math.random() * 500);
 			
@@ -137,7 +137,7 @@ class print extends Thread{
 			for(int i = 0; i < horse.length; i++){
 				int now = 0;
 				System.out.print(horse[i].name + " : ");
-				for(int j = 0; j < 50; j ++){
+				for(int j = 1; j <= 50; j ++){
 					now = horse[i].now;
 					if(now == j){
 						System.out.print(">");

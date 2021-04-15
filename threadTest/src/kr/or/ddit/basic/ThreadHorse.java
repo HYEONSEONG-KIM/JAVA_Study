@@ -1,5 +1,29 @@
 package kr.or.ddit.basic;
 
+
+/*
+ * 	10마리의 말들이 경주하는 프로그램 작성
+ * 
+ * 	말은 Horse라는 이름으로 쓰레드 클래스로 작성하는데, 
+ * 	이 클래스는 말이름(String), 현재위치(int), 등수(int)를 멤버변수로 갖음
+ * 
+ * 	그리고, 이 클래스에는 등수를 오름차순으로 처리할 수 있는 내부 정렬 기준이 있음(Comparable 인터페이스 구현)
+ * 
+ * 	경기 구간은 1 ~ 50 구간으로 되어 있음
+ * 
+ * 	경기 중간 중간에 각 말들의 위치를 아래와 같이 나타냄
+ * 	ex)
+ * 	01번말 : --->--------------------
+ * 	02번말 : ------->----------------
+ * 	03번말 : ----->------------------
+ * 	04번말 : ------------>-----------
+ * 	....
+ * 	10번말 : --------->--------------
+ * 
+ * 	경기가 끝나면 등수 순으로 출력
+ */
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -58,7 +82,7 @@ class Horse2 extends Thread implements Comparable<Horse2>{
 	@Override
 	public void run() {
 		
-		for(int i = 0; i < 50; i++){
+		for(int i = 1; i <= 50; i++){
 			now = i;
 			int ran = (int)(Math.random() * 1000);
 			try {
@@ -129,7 +153,7 @@ class PrintNow extends Thread{
 			System.out.println("************현재 상황************");
 			for(int i = 0; i < horse.size(); i++){
 				System.out.print(horse.get(i).getHName() + " : ");
-				for(int j = 0; j < 50; j++){
+				for(int j = 1; j <= 50; j++){
 					if(horse.get(i).getNow() == j)
 						System.out.print(">");
 					else
@@ -140,8 +164,8 @@ class PrintNow extends Thread{
 				else
 					System.out.println(" 현재 위치 : " + horse.get(i).getNow() + " 등수 : " + horse.get(i).getRank());
 					
-				System.out.println();
 			}
+			System.out.println();
 			
 			try {
 				Thread.sleep(500);
