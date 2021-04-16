@@ -2,6 +2,8 @@ package kr.or.ddit.basic;
 
 /*
  * yield()메서드 연습
+ * => 어느 특정 쓰레드가 특정 조건에서 수행 할 기능이면 해당 쓰레드를 yield 처리 해주고 다른 쓰레드를 먼저 실행 시키므로
+ * 	프로세스 수행을 좀 더 효율적으로 처리할 수 있음  
  */
 public class ThreadTest10 {
 
