@@ -34,7 +34,7 @@ public class ThreadHorse {
 		
 		List<Horse2> horse = new ArrayList<>();
 		
-		for(int i = 1; i <= 10; i++){
+		for(int i = 1; i <= 20; i++){
 			String name = i + "번마";
 			horse.add(new Horse2(name));
 		}
@@ -152,10 +152,10 @@ class PrintNow extends Thread{
 		while(!Horse2.flag){
 			System.out.println("************현재 상황************");
 			for(int i = 0; i < horse.size(); i++){
-				System.out.print(horse.get(i).getHName() + " : ");
+				System.out.print(horse.get(i).getHName() + "\t: ");
 				for(int j = 1; j <= 50; j++){
 					if(horse.get(i).getNow() == j)
-						System.out.print(">");
+						System.out.print("🐴");
 					else
 						System.out.print("-");
 				}
