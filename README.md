@@ -75,3 +75,9 @@
 - [synchronization-Synchronized](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/threadTest/src/kr/or/ddit/basic/ThreadTest16.java)
 - [synchronization-Lock](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/threadTest/src/kr/or/ddit/basic/ThreadTest17.java)
 - [Collection synchronization](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/threadTest/src/kr/or/ddit/basic/ThreadTest18.java)
+- [wait & notify](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/threadTest/src/kr/or/ddit/basic/ThreadTest19.java)
+
+
+## File IO
+- [File Object](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileTest01.java)
+- [File Info](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileTest03.java)
