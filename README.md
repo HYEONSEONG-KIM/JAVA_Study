@@ -81,3 +81,7 @@
 ## File IO
 - [File Object](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileTest01.java)
 - [File Info](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileTest03.java)
+- [ByteStream](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/ByteArrayIOTest02.java)
+- [File Input](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileIOTest01.java)
+- [File Output](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileIOTest02.java)
+- [File Reader Encoding](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileIOTest05.java)
