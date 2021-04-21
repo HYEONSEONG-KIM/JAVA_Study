@@ -8,6 +8,7 @@ public class BufferedIOTest02 {
 
 	public static void main(String[] args) {
 		
+		
 		// 문자 기반의 Buffered 스트림 사용 예제
 		
 		try {

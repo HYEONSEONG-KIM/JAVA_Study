@@ -1,14 +1,11 @@
 package kr.or.ddit.basic;
 
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /*
  * 	Q. 'D:/D_Other' 폴더에 있는 '펭귄.jpg' 파일을 'D:/D_Other/연습용' 
@@ -19,18 +16,31 @@ public class FileCopy {
 
 	public static void main(String[] args) {
 		
-		File file = new File("D:/D_Other/펭귄.jpg");
-		File files = new File("D:/D_Other/연습용/펭귄_복사복.jpg");
+		
+		File inFile = new File("D:/D_Other/펭귄.jpg");
+		File outFile = new File("D:/D_Other/연습용/펭귄_복사복.jpg");
+		
+		if(!inFile.exists()){
+			System.out.println("파일이 없습니다");
+			System.exit(0);
+		}
 		
 		try {
-			FileInputStream fis = new FileInputStream(file);
-			FileOutputStream fos = new FileOutputStream(files);
+			FileInputStream fis = new FileInputStream(inFile);
+			BufferedInputStream bis = new BufferedInputStream(fis);
+			
+			FileOutputStream fos = new FileOutputStream(outFile);
+			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			
 			int c;
 			
-			while((c = fis.read()) != -1){
-				fos.write(c);
+			while((c = bis.read()) != -1){
+				bos.write(c);
 			}
+			bos.flush();
+			
+			bis.close();
+			bos.close();
 			fis.close();
 			fos.close();
 			
