@@ -85,3 +85,5 @@
 - [File Input](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileIOTest01.java)
 - [File Output](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileIOTest02.java)
 - [File Reader Encoding](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileIOTest05.java)
+- [Data IO](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/DataIOTest.java)
+- [Serializable](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/ObjectIOTest.java)
