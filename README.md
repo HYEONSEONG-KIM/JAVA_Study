@@ -87,3 +87,8 @@
 - [File Reader Encoding](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/FileIOTest05.java)
 - [Data IO](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/DataIOTest.java)
 - [Serializable](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaIoTest/src/kr/or/ddit/basic/ObjectIOTest.java)
+
+## Network
+- [URL Class](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/basic/URLTest01.java)
+- [TCP(Server)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpServer01.java)
+- [TCP(Client)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpClient01.java)
