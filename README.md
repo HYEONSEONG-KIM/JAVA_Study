@@ -92,6 +92,6 @@
 - [URL Class](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/basic/URLTest01.java)
 - [TCP(Server)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpServer01.java)
 - [TCP(Client)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpClient01.java)
-- - [FileSend(Server)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpFileServer.java)
+- [FileSend(Server)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpFileServer.java)
 - [FileSend(Client)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpFileClient.java)
 
