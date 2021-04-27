@@ -98,4 +98,6 @@
 - [TCP Multi Chat Client](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/tcp/TcpMultiCahtClient.java)
 - [UDP(Server)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/udp/UdpServer.java)
 - [UDP(Client)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/udp/UdpClient.java)
+- [UDP File Send(Server)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/udp/UdpFileServerTeacher.java)
+- [UDP File Send(Client)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/udp/UdpFileClientTeacher.java)
 
