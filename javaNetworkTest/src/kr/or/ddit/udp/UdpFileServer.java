@@ -40,13 +40,9 @@ public class UdpFileServer {
 			
 			dis.flush();
 				
-			
-			
-			
-			
 			}
 		
-				
+			
 		
 			
 			
