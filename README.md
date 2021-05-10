@@ -101,3 +101,8 @@
 - [UDP File Send(Server)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/udp/UdpFileServerTeacher.java)
 - [UDP File Send(Client)](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/javaNetworkTest/src/kr/or/ddit/udp/UdpFileClientTeacher.java)
 
+## iBatis
+- [sqlMapConfig.xml](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/res/sqlMapConfig.xml)
+- [sqlMap](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/src/kr/or/ddit/basic/lprodTest.xml)
+- [dbinfo.properties](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/res/dbinfo.properties)
+- [iBatis Basic CRUD](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/src/kr/or/ddit/basic/LprodIbatisTest.java)
