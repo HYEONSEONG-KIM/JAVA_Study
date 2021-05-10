@@ -106,3 +106,4 @@
 - [sqlMap](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/src/kr/or/ddit/basic/lprodTest.xml)
 - [dbinfo.properties](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/res/dbinfo.properties)
 - [iBatis Basic CRUD](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/src/kr/or/ddit/basic/LprodIbatisTest.java)
+- [iBatisUtil](https://github.com/HYEONSEONG-KIM/JAVA_Study/blob/main/ibatisTest/src/kr/or/ddit/util/BuildedSqlMapClient.java)
