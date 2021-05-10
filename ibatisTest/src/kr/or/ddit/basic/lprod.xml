@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0/EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<sqlMap namespace="lprod2">
+	<!-- SQL문을 작성하는 xml문서에서도 typeAlias를 지정할 수 있음 -->
+	<typeAlias alias="lprodVo2" type="kr.or.ddit.basic.LprodVO"/>
+	
+	
+	
+	<select id = "lprodSelect" resultClass = "lprodVo2">
+		select * from lprod
+	</select>
+
+</sqlMap>

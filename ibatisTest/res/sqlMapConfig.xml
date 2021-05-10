@@ -42,6 +42,8 @@
 		형식) <sqlMap resource = "경로명/파일명.xml"/>
 	 -->
 	<sqlMap resource="kr/or/ddit/basic/lprodTest.xml"/>
+	<sqlMap resource="kr/or/ddit/mvc/ibatis/memberTest.xml"/>
+	<!-- <sqlMap resource="kr/or/ddit/basic/lprod.xml"/> -->
 	
 </sqlMapConfig>
 
