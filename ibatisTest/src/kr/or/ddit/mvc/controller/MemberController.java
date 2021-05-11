@@ -1,16 +1,26 @@
 package kr.or.ddit.mvc.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Scanner;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 import kr.or.ddit.mvc.service.IMemberService;
 import kr.or.ddit.mvc.service.MemberServiceImpl;
 import kr.or.ddit.mvc.vo.MemberVO;
+import kr.or.ddit.util.CryptoUtill;
 
 public class MemberController {
 
 	private IMemberService service;
 	private Scanner sc;
+	String key = "a1s2d3f4g5h6j7k8l9!@#$";
 	
 	// 생성자
 	public MemberController() {
@@ -18,15 +28,15 @@ public class MemberController {
 		service = MemberServiceImpl.getInstance();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		new MemberController().memberStart();
 	}
 	
-	private void memberStart() {
+	private void memberStart() throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		selectMenu();
 	}
 
-	private void selectMenu() {
+	private void selectMenu() throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		
 		while(true){
 			
@@ -59,7 +69,7 @@ public class MemberController {
 		}
 	}
 
-	private void dataSelect() {
+	private void dataSelect() throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		
 		List<MemberVO> memInfo = service.getAllMember();
 		
@@ -69,7 +79,9 @@ public class MemberController {
 		System.out.println("=======================================================================");
 		for(int i = 0; i < memInfo.size(); i++){
 			
-			System.out.printf("%-10s\t", memInfo.get(i).getMem_id());
+			String deId = CryptoUtill.decryptAES256(memInfo.get(i).getMem_id(), key);
+			
+			System.out.printf("%-10s\t", deId);
 			System.out.printf("%-10s\t", memInfo.get(i).getMem_pass());
 			System.out.printf("%s\t", memInfo.get(i).getMem_name());
 			System.out.printf("%-10s\t", memInfo.get(i).getMem_tel());
@@ -83,13 +95,15 @@ public class MemberController {
 		
 	}
 
-	private void dataUpdate() {
+	private void dataUpdate() throws NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		System.out.println();
 	      System.out.println("수정할 회원 정보를 입력하세요.");
 	      System.out.print("회원ID >> ");
 	      String memId = sc.nextLine();
 	      
-	      int count = service.getMemberCount(memId);
+	      String enId = CryptoUtill.encryptAES256(memId, key);
+	      
+	      int count = service.getMemberCount(enId);
 	      if(count==0){     // 없는 회원이면...
 	         System.out.println(memId + "은(는) 없는 회원ID 입니다.");
 	         System.out.println("수정 작업을 종료합니다.");
@@ -110,12 +124,15 @@ public class MemberController {
 	      System.out.print("새로운 회원주소 >> ");
 	      String memAddr = sc.nextLine();
 	      
+	      String enPass = CryptoUtill.sha512(memPass);
+	      
+	      
 	      MemberVO memVo = new MemberVO();
-	      memVo.setMem_pass(memPass);
+	      memVo.setMem_pass(enPass);
 	      memVo.setMem_name(memName);
 	      memVo.setMem_tel(memTel);
 	      memVo.setMem_addr(memAddr);
-	      memVo.setMem_id(memId);
+	      memVo.setMem_id(enId);
 	      
 	      int result = service.updateMember(memVo);
 	      
@@ -128,14 +145,16 @@ public class MemberController {
 		
 	}
 
-	private void dataDelete() {
+	private void dataDelete() throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		
 		  System.out.println();
 	      System.out.println("삭제할 회원 정보를 입력하세요.");
 	      System.out.print("회원ID >> ");
 	      String memId = sc.nextLine();
 	      
-	      int result = service.deleteMember(memId);
+	      String enId = CryptoUtill.encryptAES256(memId, key);
+	      
+	      int result = service.deleteMember(enId);
 	      
 	      if(result > 0){
 	    	  System.out.println("삭제 작업 성공!!");
@@ -144,17 +163,20 @@ public class MemberController {
 	      }
 	}
 
-	private void dataInsert() {
+	private void dataInsert() throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		System.out.println();
 	      System.out.println("추가할 회원 정보를 입력하세요.");
 	      
 	      int count = 0;  // 회원 수가 저장될 변수
 	      String memId = null;   // 회원ID가 저장될 변수
+	      String encyId = null;
 	      do{
 	         System.out.print("회원ID >> ");
 	         memId = sc.next();
 	         
-	         count = service.getMemberCount(memId);  // 회원 수를 구하는 메서드 호출
+	         encyId = CryptoUtill.encryptAES256(memId, key);
+	         
+	         count = service.getMemberCount(encyId);  // 회원 수를 구하는 메서드 호출
 	         if(count>0){
 	            System.out.println(memId + "은(는) 이미 등록된 회원ID 입니다.");
 	            System.out.println("다른 회원ID를 입력하세요.");
@@ -171,10 +193,11 @@ public class MemberController {
 	      System.out.print("회원주소 >> ");
 	      String memAddr = sc.nextLine();
 	      
-	   
+	      String enpass = CryptoUtill.sha512(memPass);
+	      
 	      MemberVO memVo = new MemberVO();
-	      memVo.setMem_id(memId);
-	      memVo.setMem_pass(memPass);
+	      memVo.setMem_id(encyId);
+	      memVo.setMem_pass(enpass);
 	      memVo.setMem_name(memName);
 	      memVo.setMem_tel(memTel);
 	      memVo.setMem_addr(memAddr);
