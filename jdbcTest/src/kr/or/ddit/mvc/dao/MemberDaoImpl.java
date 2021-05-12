@@ -12,6 +12,18 @@ import kr.or.ddit.mvc.vo.MemberVO;
 import kr.or.ddit.util.DBUtil3;
 
 public class MemberDaoImpl implements IMemberDao {
+	
+	private static MemberDaoImpl member;
+	
+	private MemberDaoImpl(){};
+	
+	public static MemberDaoImpl getInstance(){
+		if(member == null){
+			member =  new MemberDaoImpl();
+		}
+		return member;
+	}
+	
 
 	@Override
 	public int insertMember(MemberVO memVo) {

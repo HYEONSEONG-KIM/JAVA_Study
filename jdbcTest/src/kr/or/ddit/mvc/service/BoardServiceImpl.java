@@ -9,9 +9,18 @@ import kr.or.ddit.mvc.vo.BoardVO;
 public class BoardServiceImpl implements IBoardService {
 
 	private IBoardDao dao;
+	private static BoardServiceImpl service;
 	
-	public BoardServiceImpl() {
-		dao = new BoardDaoImpl();
+	
+	private BoardServiceImpl() {
+		dao = BoardDaoImpl.getInstance();
+	}
+	
+	public static BoardServiceImpl getInstance(){
+		if(service == null){
+			service = new BoardServiceImpl();
+		}
+		return service;
 	}
 	
 	@Override

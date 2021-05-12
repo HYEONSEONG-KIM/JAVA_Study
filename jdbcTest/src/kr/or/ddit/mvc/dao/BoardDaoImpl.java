@@ -12,6 +12,18 @@ import kr.or.ddit.util.DBUtil3;
 
 public class BoardDaoImpl implements IBoardDao{
 
+	private static BoardDaoImpl board;
+	
+	private BoardDaoImpl(){}
+	
+	public static BoardDaoImpl getInstance(){
+		if(board == null){
+			board = new BoardDaoImpl();
+		}
+		return board;
+	}
+	
+	
 	@Override
 	public int insertBoard(BoardVO boardVo) {
 		
@@ -125,7 +137,7 @@ public class BoardDaoImpl implements IBoardDao{
 		
 		try {
 			con = DBUtil3.getConnection();
-			String sql = "select * from jdbc_board where BOARD_CONTENT like '%" + title + "%'";
+			String sql = "select * from jdbc_board where BOARD_TITLE like '%" + title + "%'";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			boardList = new ArrayList<>();
@@ -156,18 +168,87 @@ public class BoardDaoImpl implements IBoardDao{
 
 	@Override
 	public int updateBoard(BoardVO boardVo) {
-		return 0;
+		Connection con = null;
+		PreparedStatement ps = null;
+		int cnt = 0;
+		
+		try {
+			con = DBUtil3.getConnection();
+			String sql = "update jdbc_board set board_title = ?, board_content = ? where board_no = ?";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, boardVo.getBoard_title());
+			ps.setString(2, boardVo.getBoard_content());
+			ps.setInt(3, boardVo.getBoard_no());
+			
+			cnt = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}finally{
+			if(ps != null) try{ ps.close(); }catch(SQLException e){}
+			if(con != null) try{ con.close(); }catch(SQLException e){}
+		}
+		return cnt;
 	}
 
 	@Override
 	public int deleteBoard(int boardNum) {
-		return 0;
+		Connection con = null;
+		PreparedStatement ps = null;
+		int cnt = 0;
+		
+		try {
+			con = DBUtil3.getConnection();
+			String sql = "delete from jdbc_board where board_no = ?";
+			
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, boardNum);
+			
+			cnt = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}finally{
+			if(ps != null) try{ ps.close(); }catch(SQLException e){}
+			if(con != null) try{ con.close(); }catch(SQLException e){}
+		}
+		return cnt;
 	}
 
 	@Override
 	public int cntCreate(int boardNum) {
-		// TODO Auto-generated method stub
-		return 0;
+		Connection con = null;
+		PreparedStatement ps = null;
+		int cnt = 0;
+		
+		try {
+			con = DBUtil3.getConnection();
+			String sql = "update jdbc_board set board_cnt = "
+					+ "(select board_cnt+1 from jdbc_board where board_no = ?) where board_no = ?";
+			
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, boardNum);
+			ps.setInt(2, boardNum);
+			
+			cnt = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			System.out.println("증가실패...");
+			e.printStackTrace();
+		}finally{
+			if(ps != null) try{ ps.close(); }catch(SQLException e){}
+			if(con != null) try{ con.close(); }catch(SQLException e){}
+		}
+		return cnt;
 	}
 
 }
+
+
+
+
+
+
+
+
+

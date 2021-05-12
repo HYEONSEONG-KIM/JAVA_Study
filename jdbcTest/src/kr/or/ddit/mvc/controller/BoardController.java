@@ -14,7 +14,7 @@ public class BoardController {
 	boolean flag = true;
 	
 	public BoardController() {
-		service = new BoardServiceImpl();
+		service = BoardServiceImpl.getInstance();
 		sc = new Scanner(System.in);
 	}
 
@@ -61,6 +61,7 @@ public class BoardController {
 		System.out.print("보기를 원하는 게시물 번호 입력>>");
 		int boardNo = Integer.parseInt(sc.nextLine());
 		
+		service.cntCreate(boardNo);
 		BoardVO boardVo = service.showBoard(boardNo);
 		
 		System.out.println(boardNo + "번글 내용");
@@ -76,12 +77,50 @@ public class BoardController {
 		int input = Integer.parseInt(sc.nextLine());
 
 		switch(input){
-			case 1 :
+			case 1 : updateBoard(boardNo);
 				break;
-			case 2 :
+			case 2 : deleteBoard(boardNo);
 				break;
 			case 3 :
 				return;
+		}
+		
+	}
+
+	// 게시글 삭제
+	private void deleteBoard(int boardNo) {
+		
+		int result = service.deleteBoard(boardNo);
+		
+		if(result > 0){
+			System.out.println("삭제되었습니다");
+		}else{
+			System.out.println("삭제에 실패하였습니다");
+		}
+		
+	}
+
+
+	// 게시글 수정
+	private void updateBoard(int boardNo) {
+		System.out.println("수정 작업하기");
+		System.out.println("-----------------------------------------");
+		System.out.print("제 목 >>");
+		String title = sc.nextLine();
+		System.out.print("내 용 >>");
+		String content = sc.nextLine();
+		
+		BoardVO boardVo = new BoardVO();
+		boardVo.setBoard_content(content);
+		boardVo.setBoard_title(title);
+		boardVo.setBoard_no(boardNo);
+		
+		int result = service.updateBoard(boardVo);
+		
+		if(result > 0){
+			System.out.println("수정되었습니다");
+		}else{
+			System.out.println("수정에 실패하였습니다");
 		}
 		
 	}
